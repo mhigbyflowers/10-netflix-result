@@ -2,8 +2,8 @@ export default function netflixResult(element, movieTitle) {
 
 
 
-console.log(movieTitle);
-  const later = fetch('http://netflixroulette.net/api/api.php?title=Attack%20on%20titan')
+// console.log(movieTitle);
+  const later = fetch(`http://netflixroulette.net/api/api.php?title=${movieTitle}`)
     //wait for a response back and turn the string of JSON in to actual JS object
     .then((res) => res.json())
     //Once we have a JS object to work with, here is what we're gonna do with it

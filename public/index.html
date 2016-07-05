@@ -20,7 +20,7 @@
           <div class="card-top">
             <section class="card-top__left">
               <h1 class="movie-title"></h1>
-              <h3 class="genre"> </h3>
+              <h3 class="genre"></h3>
               <h2 class="movie-rating"></h2><span class="fa fa-star"></span>
             </section>
             <section class="card-top__right">
@@ -43,10 +43,15 @@
 
 
   <script type="text/javascript">
+
     const appCard = document.querySelector('.app');
-    var movieTitle = require('index');
-    var app = require('netflix-result');
-    app(appCard, movieTitle());
+    var app = require('index');
+    var movieSearch = require('netflix-result');
+
+    app(appCard);
+
+
+    movieSearch(appCard, 'Scrubs');
   </script>
 </body>
 
