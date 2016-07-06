@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>10-netflix-result</title>
+  <title>10-netflix-result!s</title>
   <link rel="stylesheet" href="/app.css">
 </head>
+
 <body>
+  <div class="app">
+    <div class="container">
+      <div class="container-inner">
+        <div class="search-bar">
+          <input class="search" value="" placeholder="Movie Title" required="1">
+          <button class="search-btn" type="button" name="button">Search</button>
+        </div>
+        <div class="card">
+
+          <div class="card-top">
+            <section class="card-top__left">
+              <h1 class="movie-title"></h1>
+              <h3 class="genre"></h3>
+              <h2 class="movie-rating"></h2><span class="fa fa-star"></span>
+            </section>
+            <section class="card-top__right">
+              <img class="movie-image" src="" alt="">
+            </section>
+          </div>
+          <h2 class="summary">Summary</h2>
+          <p class="summary-info"></p>
+          <h2 class="actors">Actors</h2>
+          <p class="actors-info"></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
 
   <script src="/vendor.js" charset="utf-8"></script>
   <script src="/app.js" charset="utf-8"></script>
 
+
   <script type="text/javascript">
+
+    const appCard = document.querySelector('.app');
+    var app = require('index');
+    var movieSearch = require('netflix-result');
+
+    app(appCard);
+
+
+    movieSearch(appCard, 'Scrubs');
   </script>
 </body>
+
 </html>
