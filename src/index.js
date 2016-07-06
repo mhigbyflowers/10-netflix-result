@@ -1,8 +1,8 @@
 import netflixResult from 'netflix-result';
 export default function(el) {
 
-  const Btn = document.querySelector('.search-btn');
-  let submission = document.querySelector('.search')
+  const Btn = el.querySelector('.search-btn');
+  let submission = el.querySelector('.search')
   console.log(Btn);
 
   function submit() {
